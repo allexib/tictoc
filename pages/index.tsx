@@ -10,15 +10,17 @@ interface IProps {
 const Home = ({ videos }: IProps) => {
   console.log(videos);
 
-  return (<div className='flex flex-col gap-10 videos h-full'>
-      {videos.length?(
-          videos.map((videos:Video)=>(
-              <VideoCard post={video} key={video._id}/>
-          ))
-      ):(
-          <NoResults text={'No videos'}/>
+  return (
+    <div className="flex flex-col gap-10 videos h-full">
+      {videos.length ? (
+        videos.map((video: Video) => (
+          <VideoCard post={video} key={video._id} />
+        ))
+      ) : (
+        <NoResults text={"No videos"} />
       )}
-  </div>)
+    </div>
+  );
 };
 
 export const getServerSideProps = async () => {

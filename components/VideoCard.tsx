@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
+import { Video } from "../types";
+import { NextPage } from "next";
 
-const VideoCard = () => {
-    return (
-        <div>
-            VideoCard
-        </div>
-    );
+interface IProps {
+  post: Video;
+}
+
+const VideoCard: NextPage<IProps> = ({ post }) => {
+  return <div>VideoCard</div>;
 };
 
 export default VideoCard;
-
 
 // import React, { useEffect, useRef, useState } from 'react';
 // import { NextPage } from 'next';
