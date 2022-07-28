@@ -19,7 +19,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
       <div>
         <div className="flex gap-3 p-2 cursor-pointer font-semibold rounded ">
           <div className="md:w-16 md:h-16 w-10 h-10">
-            <Link href='/'>
+            <Link href="/">
               <>
                 <Image
                   width={62}
@@ -30,6 +30,17 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                   layout="responsive"
                 />
               </>
+            </Link>
+          </div>
+          <div>
+            <Link href="/">
+              <div>
+                <p>
+                  {post.postedBy.userName}
+                  <GoVerified className="text-blue-400 text-md" />
+                </p>
+                <p>{post.postedBy.userName}</p>
+              </div>
             </Link>
           </div>
         </div>
